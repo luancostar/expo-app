@@ -1,12 +1,14 @@
 
 import { StyleSheet, Text, View } from 'react-native';
 import Header from '../../components/Header';
+import Balance from '../../components/Balance';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Header/>
-      <Text>Página Home</Text>
+      <Header name="Luan Rodrigues" />
+      <Balance/>
+ 
     </View>
   );
 }
@@ -14,7 +16,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fafafa',
  
   },
 });
