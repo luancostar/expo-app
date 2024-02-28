@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function Balance() {
+export default function Balance({saldo, gastos}) {
  return (
    <View style={styles.container}>
 
@@ -10,7 +10,7 @@ export default function Balance() {
             <Text style={styles.currencySymbol}>
                 R$
             </Text>
-            <Text style={styles.balance}>20.000,00</Text>
+            <Text style={styles.balance}>{saldo}</Text>
         </View>
     </View>
 
@@ -20,7 +20,7 @@ export default function Balance() {
             <Text style={styles.currencySymbol}>
                 R$
             </Text>
-            <Text style={styles.balance}>7.250,00</Text>
+            <Text style={styles.expenses}>{gastos}</Text>
         </View>
     </View>
 
@@ -58,5 +58,9 @@ currencySymbol: {
 balance: {
     fontSize: 22,
     color: '#2ecc71',
+},
+expenses: {
+    fontSize: 22,
+    color: '#e74c3c',
 }
 })
